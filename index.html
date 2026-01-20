@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Landing Profesional</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Leaflet -->
+  <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-inner">
+    <span class="brand">Bohemia</span>
+
+    <!-- Botón hamburguesa -->
+    <button class="nav-toggle" aria-label="Abrir menú">
+      <span class="hamburger"></span>
+    </button>
+
+    <ul class="nav-menu">
+      <li><a href="#hero">Inicio</a></li>
+      <li><a href="#manifesto">Nuestros productos</a></li>
+      <li><a href="#info">Estado</a></li>
+      <li><a href="#map-wrapper">Ubicación</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header id="header">
+  <section id="hero"></section>
+</header>
+
+<!-- MAIN -->
+<main id="main">
+  <section id="manifesto"></section>
+</main>
+
+<!-- MAP -->
+<section class="map-wrapper" id="map-wrapper">
+  <header class="map-header">
+    <h2>Exploración visual</h2>
+  </header>
+  <div id="map"></div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer"></footer>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<!-- Main JS -->
+<script src="js/app.js"></script>
+
+<!-- Menu hamburguesa JS -->
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const menu = document.querySelector('.nav-menu');
+
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('active');
+    toggle.classList.toggle('open');
+  });
+
+  // Cierra el menú al hacer click en un enlace
+  document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.remove('active');
+      toggle.classList.remove('open');
+    });
+  });
+</script>
+
+</body>
+</html>
