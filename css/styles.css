@@ -293,6 +293,41 @@ section p {
 }
 
 /* ==================================================
+   INFO SECTION
+================================================== */
+.info-section {
+  background: var(--gray-100);
+  padding: var(--section-padding) var(--inner-padding);
+  border-radius: var(--radius-lg);
+  margin-bottom: clamp(3rem, 6vw, 5rem);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  text-align: center;
+}
+
+.info-content {
+  max-width: 780px;
+  margin: auto;
+  text-align: center;
+}
+
+.info-section h2 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  margin-left: -35px;
+  letter-spacing: -0.02em;
+  color: var(--black);
+}
+
+.info-section p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+
+/* ==================================================
    MAP
 ================================================== */
 #map-section {
